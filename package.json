@@ -2,7 +2,7 @@
   "name": "namaste_react",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel serve index.html --no-hmr",
+    "start": "parcel index.html --no-hmr",
     "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
