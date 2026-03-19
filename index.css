@@ -29,6 +29,7 @@
   margin: 5px;
   padding: 5px;
   width: 200px;
+  height: 390px;
   border: 1px solid transparent;
   border-radius: 15px;
   transition: all 0.2s ease;
@@ -82,4 +83,9 @@
 
 .filter {
   display: flex;
+}
+
+.res-link {
+  text-decoration: none;
+  color: inherit;
 }
