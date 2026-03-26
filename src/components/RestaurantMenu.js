@@ -1,22 +1,11 @@
-import { useEffect, useState } from "react";
-import { generateMockMenu } from "../utils/mockMenu";
 import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
   const { resId } = useParams(); 
-  console.log(useParams());
 
-  const [menu, setMenu] = useState(null);
-
-  useEffect(() => {
-    setTimeout(() => {
-        setMenu(generateMockMenu(resId));
-    }, 1000);
-  }, []);
-  
-  // We are not  using state variables because we already have the data and we are not updating the variables
-
+  const menu = useRestaurantMenu(resId);
 
   return  !menu ? <Shimmer /> : (
     <div>
