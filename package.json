@@ -16,10 +16,11 @@
     "react-router-dom": "^6.11.2"
   },
   "devDependencies": {
-    "parcel": "^2.16.4"
+    "@tailwindcss/postcss": "^4.2.2",
+    "parcel": "^2.16.4",
+    "tailwindcss": "^4.2.2"
   },
   "browserslist": [
     "last 2 versions"
   ]
 }
- 
