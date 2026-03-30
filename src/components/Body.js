@@ -1,14 +1,19 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useContext } from "react";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   const [listOfRestaurants, setListRestaurant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
   const [searchText, setSearchText] = useState("");
+
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
+
   console.log("hello");
 
   useEffect(() => {
@@ -34,6 +39,8 @@ const Body = () => {
     return (
       <h1>Looks Like you're offline!! Please check your internet connection</h1>
     );
+
+    const { loggedInUser, setUserName } = useContext(UserContext);
 
   return !listOfRestaurants || listOfRestaurants.length === 0 ? (
     <Shimmer />
@@ -63,7 +70,7 @@ const Body = () => {
             Search
           </button>
         </div>
-        <div  className="m-4 p-4 flex items-center">
+        <div className="m-4 p-4 flex items-center">
           <button
             className="px-4 py-2 bg-gray-100 rounded-lg"
             onClick={() => {
@@ -77,6 +84,10 @@ const Body = () => {
             Top Rated Restaurants
           </button>
         </div>
+        <div className="m-4 p-4 flex items-center"> 
+        <label>UserName : </label>
+        <input className="border border-black p-2" value={loggedInUser} onChange={(e) => setUserName(e.target.value)}/>
+        </div>
       </div>
       <div className="res-container flex flex-wrap">
         {filteredRestaurant.map((restaurant) => (
@@ -85,7 +96,7 @@ const Body = () => {
             key={restaurant.info.id}
             to={`/restaurants/${restaurant.info.id}`}
           >
-            <RestaurantCard resData={restaurant} />
+            <RestaurantCardPromoted resData={restaurant} />
           </Link>
         ))}
       </div>

@@ -1,12 +1,12 @@
-import { generateMockMenu } from "../utils/mockMenu";
 import { useEffect, useState } from "react";
+import MOCK_MENU from "../utils/mockMenu";
 
-const useRestaurantMenu = (resId) => {
+const useRestaurantMenu = () => {
   const [menu, setMenu] = useState(null);
 
   useEffect(() => {
     setTimeout(() => {
-      setMenu(generateMockMenu(resId));
+      setMenu(MOCK_MENU);
     }, 1000);
   }, []);
 
