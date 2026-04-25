@@ -1,0 +1,79 @@
+{
+    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+    "info": {
+        "id": "1316369",
+        "name": "Epic Bite",
+        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2026/1/25/f88bbe31-53a9-459d-8477-1c622f89cb3b_1316369.jpg",
+        "locality": "Chhindwara City",
+        "areaName": "Chhindwara City",
+        "costForTwo": "₹389 for two",
+        "cuisines": [
+            "Biryani",
+            "North Indian",
+            "Mughlai"
+        ],
+        "avgRating": 3.7,
+        "parentId": "245272",
+        "avgRatingString": "3.7",
+        "totalRatingsString": "22",
+        "sla": {
+            "deliveryTime": 65,
+            "lastMileTravel": 14.4,
+            "serviceability": "SERVICEABLE",
+            "slaString": "60-70 mins",
+            "lastMileTravelString": "14.4 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2026-04-25 00:00:00",
+            "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "10% OFF",
+            "subHeader": "UPTO ₹100"
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "isNewlyOnboarded": true,
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+        "context": "seo-data-c3df3686-513a-4ddf-8216-177889cf1088"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/city/chhindwara/epic-bite-chhindwara-city-rest1316369",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}

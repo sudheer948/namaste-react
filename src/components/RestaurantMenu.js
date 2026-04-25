@@ -14,7 +14,6 @@ const RestaurantMenu = () => {
   if (!menu) return <Shimmer />;
 
   const categories = menu.categories.filter((cat) => cat.items.length > 0);
-  console.log(categories);
 
   return (
     <div>
