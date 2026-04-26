@@ -3,3 +3,4 @@ export const CDN_URL =
 
 export const LOGO_URL = "https://tinyurl.com/ezu448c3";
 
+export const FOOD_IMG = "https://tinyurl.com/3jwb7by8";

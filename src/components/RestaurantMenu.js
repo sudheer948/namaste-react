@@ -17,8 +17,6 @@ const RestaurantMenu = () => {
 
   return (
     <div>
-      <h1 className="font-bold my-6 text-2xl text-center">{menu.name}</h1>
-
       {categories.map((cat, index) => (
         <RestaurantCategory
           key={cat.title}

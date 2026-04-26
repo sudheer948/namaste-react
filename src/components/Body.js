@@ -35,7 +35,9 @@ const Body = () => {
 
   if (onlineStatus === false)
     return (
-      <h1>Looks Like you're offline!! Please check your internet connection</h1>
+      <h1 className="max-w-3xl mx-auto mt-20 px-6 py-8 text-center text-2xl font-semibold text-gray-700 bg-white/80 backdrop-blur-lg border border-white/30 rounded-2xl shadow-md">
+        Looks Like you're offline!! Please check your internet connection
+      </h1>
     );
 
   const { loggedInUser, setUserName } = useContext(UserContext);
@@ -43,20 +45,20 @@ const Body = () => {
   return !listOfRestaurants || listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
-      <div className="filter flex">
-        <div className="search m-4 p-4">
+    <div className="max-w-7xl mx-auto px-6 py-8">
+      <div className="filter flex flex-wrap items-center justify-between gap-4 mb-8">
+        <div className="search flex items-center gap-3 bg-white shadow-sm rounded-2xl px-4 py-3 border border-gray-100">
           <input
             type="text"
             data-testid="searchInput"
-            className="border border-solid border-black"
+            className="outline-none bg-transparent px-2 py-2 w-64 text-gray-700"
             value={searchText}
             onChange={(e) => {
               setSearchText(e?.target?.value);
             }}
           />
           <button
-            className="px-4 py-2 bg-green-100 m-4 rounded-lg"
+            className="px-5 py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
             onClick={() => {
               const filteredRestaurant = listOfRestaurants.filter((res) =>
                 res?.info?.name
@@ -69,9 +71,9 @@ const Body = () => {
             Search
           </button>
         </div>
-        <div className="m-4 p-4 flex items-center">
+        <div className="flex items-center">
           <button
-            className="px-4 py-2 bg-gray-100 rounded-lg"
+            className="px-5 py-2 bg-gray-100 hover:bg-orange-50 hover:text-orange-500 font-medium rounded-lg transition-all duration-300"
             onClick={() => {
               const filteredList = listOfRestaurants.filter(
                 (res) => res?.info?.avgRating > 4.2,
@@ -83,16 +85,16 @@ const Body = () => {
             Top Rated Restaurants
           </button>
         </div>
-        <div className="m-4 p-4 flex items-center">
-          <label>UserName : </label>
+        <div className="flex items-center gap-3 bg-white shadow-sm rounded-2xl px-4 py-3 border border-gray-100">
+          <label className="font-medium text-gray-700">UserName : </label>
           <input
-            className="border border-black p-2"
+            className="border border-gray-200 rounded-xl px-4 py-2 outline-none focus:border-orange-400"
             value={loggedInUser}
             onChange={(e) => setUserName(e.target.value)}
           />
         </div>
       </div>
-      <div className="res-container flex flex-wrap">
+      <div className="res-container flex flex-wrap justify-center gap-6">
         {filteredRestaurant.map((restaurant) => (
           <Link
             className="res-link"
